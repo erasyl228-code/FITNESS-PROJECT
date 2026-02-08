@@ -9,7 +9,7 @@ const getExercisesByMuscle = async (req, res) => {
       `https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`,
       {
         headers: {
-          "X-Api-Key": "DEMO_KEY", // можно оставить так для защиты
+          "X-Api-Key": process.env.API_NINJAS_KEY 
         },
       }
     );
