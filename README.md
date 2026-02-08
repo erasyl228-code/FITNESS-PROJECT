@@ -160,6 +160,8 @@ The backend application is ready for deployment on:
 - Railway
 - Replit
 
+https://fitness-project-dx5b.onrender.com
+
 All sensitive data is stored in environment variables.
 
 ---
