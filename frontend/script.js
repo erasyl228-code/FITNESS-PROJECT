@@ -54,7 +54,7 @@ async function createWorkout() {
     }),
   });
 
-  const data = await res.json();
+  await res.json();
   loadWorkouts();
 }
 

@@ -2,25 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Gym App - Login</title>
+  <title>Gym App</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
 
-  <h1>🏋️ Gym App</h1>
+<body class="home"></body>
 
-  <h2>Register</h2>
-  <input id="regName" placeholder="Name" />
-  <input id="regEmail" placeholder="Email" />
-  <input id="regPassword" type="password" placeholder="Password" />
-  <button onclick="register()">Register</button>
+  <div class="overlay"></div>
 
-  <h2>Login</h2>
-  <input id="loginEmail" placeholder="Email" />
-  <input id="loginPassword" type="password" />
-  <button onclick="login()">Login</button>
+  <div class="container">
+    <h1> Gym App</h1>
 
-  <p id="message"></p>
+    <div class="block">
+      <h2>Register</h2>
+      <input id="regName" placeholder="Name" />
+      <input id="regEmail" placeholder="Email" />
+      <input id="regPassword" type="password" placeholder="Password" />
+      <button onclick="register()">Register</button>
+    </div>
+
+    <div class="block">
+      <h2>Login</h2>
+      <input id="loginEmail" placeholder="Email" />
+      <input id="loginPassword" type="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+    </div>
+
+    <p id="message"></p>
+  </div>
 
   <script src="script.js"></script>
 </body>

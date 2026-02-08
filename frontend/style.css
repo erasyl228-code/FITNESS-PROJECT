@@ -1,24 +1,180 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #111;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+body.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
-  padding: 40px;
+
+  background-image:
+    url("images/1.png"),
+    url("images/2.jpg"),
+    url("images/3.jpg"),
+    url("images/4.jpg");
+
+  background-size:
+    50% 50%,
+    50% 50%,
+    50% 50%,
+    50% 50%;
+
+  background-position:
+    top left,
+    top right,
+    bottom left,
+    bottom right;
+
+  background-repeat: no-repeat;
 }
 
-input, button {
-  display: block;
-  margin: 10px 0;
-  padding: 8px;
-  width: 250px;
+/* Overlay только на главной */
+body.home .overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+/* Центрированная карточка — работает на всех страницах */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 380px;
+  padding: 40px 35px;
+  border-radius: 18px;
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.82);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.block {
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ff4d4d;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
 }
 
 button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
   background: #ff4d4d;
   color: white;
-  border: none;
+  font-size: 15px;
+  font-weight: bold;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 button:hover {
   background: #ff1a1a;
+  transform: scale(1.04);
+}
+
+#message {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Страница My Workouts — фон просто тёмный */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background: #121212; /* простой тёмный фон */
+  color: white;
+}
+
+/* Заголовок */
+h1 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Инпуты */
+input {
+  width: 300px;
+  max-width: 90%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #1e1e1e;
+  color: white;
+}
+
+/* Кнопка */
+button {
+  width: 300px;
+  max-width: 90%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #ff4d4d;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #ff1a1a;
+  transform: scale(1.04);
+}
+
+/* Список тренировок */
+#workoutList {
+  margin-top: 25px;
+  width: 100%;
+  max-width: 400px;
+  list-style: none;
+}
+
+#workoutList li {
+  background: #1e1e1e;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
