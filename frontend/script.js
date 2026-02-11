@@ -16,7 +16,6 @@ async function register() {
   message.innerText = data.message || "Registered successfully";
 }
 
-// ---------- LOGIN ----------
 async function login() {
   const email = loginEmail.value;
   const password = loginPassword.value;
@@ -37,7 +36,6 @@ async function login() {
   }
 }
 
-// ---------- CREATE WORKOUT ----------
 async function createWorkout() {
   const token = localStorage.getItem("token");
 
@@ -58,7 +56,6 @@ async function createWorkout() {
   loadWorkouts();
 }
 
-// ---------- LOAD WORKOUTS ----------
 async function loadWorkouts() {
   const token = localStorage.getItem("token");
 

@@ -1,9 +1,26 @@
 const axios = require("axios");
+const allowedMuscles = [
+  "chest",
+  "biceps",
+  "triceps",
+  "back",
+  "shoulders",
+  "quadriceps",
+  "hamstrings",
+  "calves",
+  "glutes",
+  "abs"
+];
 
-// GET /api/external/exercises/:muscle
 const getExercisesByMuscle = async (req, res) => {
   try {
-    const muscle = req.params.muscle;
+    const muscle = req.params.muscle.toLowerCase();
+    if (!allowedMuscles.includes(muscle)) {
+      return res.status(400).json({
+        message: "Invalid muscle group",
+        allowedMuscles: allowedMuscles
+      });
+    }
 
     const response = await axios.get(
       `https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`,

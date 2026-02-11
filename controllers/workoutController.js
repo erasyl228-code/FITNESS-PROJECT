@@ -13,13 +13,11 @@ const createWorkout = async (req, res) => {
   res.status(201).json(workout);
 };
 
-// GET /api/workouts
 const getWorkouts = async (req, res) => {
   const workouts = await Workout.find({ user: req.user._id });
   res.json(workouts);
 };
 
-// GET /api/workouts/:id
 const getWorkoutById = async (req, res) => {
   const workout = await Workout.findById(req.params.id);
 
@@ -31,7 +29,6 @@ const getWorkoutById = async (req, res) => {
   res.json(workout);
 };
 
-// PUT /api/workouts/:id
 const updateWorkout = async (req, res) => {
   const workout = await Workout.findById(req.params.id);
 
@@ -49,7 +46,6 @@ const updateWorkout = async (req, res) => {
   res.json(workout);
 };
 
-// DELETE /api/workouts/:id
 const deleteWorkout = async (req, res) => {
   const workout = await Workout.findById(req.params.id);
 

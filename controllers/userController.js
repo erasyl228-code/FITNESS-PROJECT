@@ -1,11 +1,9 @@
 const User = require("../models/User");
 
-// GET /api/users/profile
 const getProfile = async (req, res) => {
   res.json(req.user);
 };
 
-// PUT /api/users/profile
 const updateProfile = async (req, res) => {
   const user = await User.findById(req.user._id);
 
